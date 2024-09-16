@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROSLAYER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <h1 id="item1" class="title">PROSLAYER</h1>
+    <div id="item2" class="search-icon" onclick="toggleSearch()">🔍</div>
+    <div class="search-bar" id="search-bar" style="display: none;">
+        <input type="text" placeholder="ابحث هنا..." />
+    </div>
+</header>
+
+<nav id="nav-menu" class="hidden">
+    <ul>
+        <li><a href="#">الرئيسة</a></li>
+        <li><a href="#">المانهوا</a></li>
+        <li><a href="#">الدعم</a></li>
+    </ul>
+</nav>
+
+<section class="featured">
+    <h2>الأكثر مشاهدة</h2>
+    <div class="carousel">
+        <a href="#"><img src="image1.jpg" alt="مانها"></a>
+        <a href="#"><img src="image2.jpg" alt="مانها"></a>
+        <a href="#"><img src="image3.jpg" alt="مانها"></a>
+    </div>
+</section>
+
+<section class="latest-chapters">
+    <h2>أحدث الفصول</h2>
+    <div class="chapters">
+        <div class="chapter">
+            <img src="chapter1.jpg" alt="فصل 1">
+            <h3>مانها 1</h3>
+            <button>اقرأ المزيد</button>
+        </div>
+        <div class="chapter">
+            <img src="chapter2.jpg" alt="فصل 2">
+            <h3>مانها 2</h3>
+            <button>اقرأ المزيد</button>
+        </div>
+        <div class="chapter">
+            <img src="chapter3.jpg" alt="فصل 3">
+            <h3>مانها 3</h3>
+            <button>اقرأ المزيد</button>
+        </div>
+        <div class="chapter">
+            <img src="chapter4.jpg" alt="فصل 4">
+            <h3>مانها 4</h3>
+            <button>اقرأ المزيد</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.classList.toggle('hidden');
+    }
+
+    function toggleSearch() {
+        const searchBar = document.getElementById('search-bar');
+        searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
+</body>
+</html>
